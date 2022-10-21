@@ -60,12 +60,8 @@ namespace Lab1
         {
             Console.WriteLine(String.Format("\n{0, 10}'s game history:\nOpponent   | Result  | Cost | Game Index", UserName));
             foreach (Game game in gameList)
-            {
                 if (string.Equals(game.FirstPlayer, UserName) || string.Equals(game.SecondPlayer, UserName))
-                {
                     Console.WriteLine(String.Format("{0, -10} | {1,-7} | {2,4} | {3,10}", string.Equals(game.FirstPlayer, UserName) ? game.SecondPlayer : game.FirstPlayer, game.Result == (string.Equals(game.FirstPlayer, UserName) ? true : false) ? "Victory" : "Defeat", game.RatingCost, game.Index));
-                }
-            }
             Console.WriteLine("Current rating: " + CurrentRating + "\n");
         }
     }
